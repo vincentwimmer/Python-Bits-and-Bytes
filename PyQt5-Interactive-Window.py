@@ -8,7 +8,7 @@ import threading
 class Ui(QtWidgets.QMainWindow):
 	def __init__(self):
 		super(Ui, self).__init__()
-		uic.loadUi('C:/Users/vwimmer/Documents/Git/PyQT Test/test.ui', self)
+		uic.loadUi('PyQt5-Interactive-Window.ui', self)
 
 		self.printbutton = self.findChild(QtWidgets.QPushButton, 'printButton') # Find the button
 		self.printbutton.clicked.connect(self.printButtonPressed) # Remember to pass the definition/method, not the return value!
