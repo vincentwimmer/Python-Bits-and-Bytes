@@ -1,6 +1,6 @@
 import json
 
-getJsonFile = 'C:/Users/vwimmer/Documents/Git/Tests/testData.json'
+getJsonFile = 'testData.json'
 with open(getJsonFile) as jsonF:
 	jsonObjects = json.load(jsonF)
 
