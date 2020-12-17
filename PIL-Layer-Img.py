@@ -1,8 +1,8 @@
 from PIL import Image
 
 # Open background and foreground and ensure they are RGB (not palette)
-bg = Image.open('C:/Users/vwimmer/Documents/Git/Tests/background.png').convert('RGB')
-fg = Image.open('C:/Users/vwimmer/Documents/Git/Tests/overlay.png').convert('RGBA')
+bg = Image.open('background.png').convert('RGB')
+fg = Image.open('overlay.png').convert('RGBA')
 
 # Resize foreground down from 500x500 to 100x100
 fg_resized = fg.resize((200,200))
