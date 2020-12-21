@@ -7,7 +7,7 @@ from PIL import ImageDraw
 img = Image.new("RGB", (400, 400), (0, 0, 0))
 inputText = "//&&||$$123ABC@"
 
-font = ImageFont.truetype("C:/Users/vwimmer/Documents/Git/Tests/fonts/Roboto-Medium.ttf", 72)
+font = ImageFont.truetype("Roboto-Medium.ttf", 72)
 
 for x in range(360):
 	txt = Image.new("RGBA", (1200, 1200), (255, 255, 255, 0))
@@ -41,7 +41,7 @@ img.show()
 #img = Image.new("RGB", (400, 400), (0, 0, 0))
 #inputText = "//&&||$$123ABC@"
 #
-#font = ImageFont.truetype("C:/Users/vwimmer/Documents/Git/Tests/fonts/Roboto-Medium.ttf", 24)
+#font = ImageFont.truetype("Roboto-Medium.ttf", 24)
 #
 #for x in range(360):
 #	txt = Image.new("RGBA", (400, 400), (255, 255, 255, 0))
