@@ -4,7 +4,7 @@ from PIL import Image
 bg = Image.open('background.png').convert('RGB')
 fg = Image.open('overlay.png').convert('RGBA')
 
-# Resize foreground down from 500x500 to 100x100
+# Resize foreground down from 500x500 to 200x200
 fg_resized = fg.resize((200,200))
 
 # Overlay foreground onto background at top right corner, using transparency of foreground as mask
