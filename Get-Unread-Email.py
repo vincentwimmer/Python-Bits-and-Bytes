@@ -1,3 +1,5 @@
+# Note: This will mark mail as read after executing.
+
 mailUser = "email@website.com"
 mailPass = "password"
 imapHost = "website.com"
