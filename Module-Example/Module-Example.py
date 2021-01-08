@@ -1,8 +1,12 @@
 import sys
+# Set path to script folder.
 sys.path.append('/Scripts/')
 
+# Import the whole script.
 import module1
-import module2
+
+# Or import single function to maintain lean code.
+from module2 import main
 
 print(module1.main(1,3))
-print(module2.main(3,3))
+print(main(3,3))
