@@ -1,6 +1,6 @@
 dict1 = {"a":"aaa","b":"bbb","c":"ccc"}
 
-str1 = "The list: \n"
+str1 = "The dict: \n"
 
 for k,v in dict1.items():
 	vals = k + " : " + v
