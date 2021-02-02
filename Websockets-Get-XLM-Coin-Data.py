@@ -28,7 +28,13 @@ ws.send('{"event":"pusher:subscribe","data":{"channel":"27236401963685060"}}')
 while True:
 	try:
 		result = ws.recv()
-		print(result)
+		try: 
+			b = json.loads(result)
+			b = json.loads(b['data'])
+			print("XLM - [ Bid:",b['bid'], "] - [ Ask:",b['ask'],"]")
+		except:
+			print(result)
+
 	except Exception as e:
 		print(e)
 		break
