@@ -41,13 +41,21 @@ def drawImage():
 	color5 = re.split("\[|,|]", str(colorData[4]))
 	color5List = [color5[1],color5[2],color5[3]]
 
+	# Resolution Standards
+	# 7680 × 4320 8k
+	# 15360 x 8640 16k
+	# 30720 x 17280 32k
+	# 61440 x 34560 64k
+	# 122880 x 69120 128k
+	# 245760 x 138240 256k
+
 	# Create Image
-	testImage = Image.new("RGB", (500,500), (255,255,255))
+	testImage = Image.new("RGB", (15360,8640), (255,255,255))
 	pixel = testImage.load()
 
-	for latx in range(50):
+	for latx in range(1536):
 		latx = latx * 10
-		for lony in range(50):
+		for lony in range(864):
 			lony = lony * 10
 
 			rng = random.randrange(1,6)
@@ -80,4 +88,6 @@ def drawImage():
 	return testImage
 
 finalImage = drawImage()
-finalImage.show()
+#finalImage.show()
+
+finalImage.save('C:/Users/vwimmer/Desktop/test.png')
