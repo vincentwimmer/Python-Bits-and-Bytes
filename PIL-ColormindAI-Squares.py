@@ -12,36 +12,40 @@ data1 = {'model': 'ui'}
 data2 = {'model': 'communist'}
 data3 = {'model': 'default'}
 
-rng = random.randrange(1,4)
-if rng == 1:
-	data = data1
-if rng == 2:
-	data = data2
-if rng == 3:
-	data = data3
 
-getPage = requests.get(url, data=json.dumps(data), headers=headers, timeout=(60))
-colorData = json.loads(getPage.content)
-colorData = colorData['result']
-
-color1 = re.split("\[|,|]", str(colorData[0]))
-color1List = [color1[1],color1[2],color1[3]]
-
-color2 = re.split("\[|,|]", str(colorData[1]))
-color2List = [color2[1],color2[2],color2[3]]
-
-color3 = re.split("\[|,|]", str(colorData[2]))
-color3List = [color3[1],color3[2],color3[3]]
-
-color4 = re.split("\[|,|]", str(colorData[3]))
-color4List = [color4[1],color4[2],color4[3]]
-
-color5 = re.split("\[|,|]", str(colorData[4]))
-color5List = [color5[1],color5[2],color5[3]]
 
 
 
 def drawImage():
+	# Get colors and split them
+	rng = random.randrange(1,4)
+	if rng == 1:
+		data = data1
+	if rng == 2:
+		data = data2
+	if rng == 3:
+		data = data3
+
+	getPage = requests.get(url, data=json.dumps(data), headers=headers, timeout=(60))
+	colorData = json.loads(getPage.content)
+	colorData = colorData['result']
+
+	color1 = re.split("\[|,|]", str(colorData[0]))
+	color1List = [color1[1],color1[2],color1[3]]
+
+	color2 = re.split("\[|,|]", str(colorData[1]))
+	color2List = [color2[1],color2[2],color2[3]]
+
+	color3 = re.split("\[|,|]", str(colorData[2]))
+	color3List = [color3[1],color3[2],color3[3]]
+
+	color4 = re.split("\[|,|]", str(colorData[3]))
+	color4List = [color4[1],color4[2],color4[3]]
+
+	color5 = re.split("\[|,|]", str(colorData[4]))
+	color5List = [color5[1],color5[2],color5[3]]
+
+	# Create Image
 	testImage = Image.new("RGB", (500,500), (255,255,255))
 	pixel = testImage.load()
 
