@@ -12,10 +12,6 @@ data1 = {'model': 'ui'}
 data2 = {'model': 'communist'}
 data3 = {'model': 'default'}
 
-
-
-
-
 def drawImage():
 	# Get colors and split them
 	rng = random.randrange(1,4)
@@ -60,38 +56,28 @@ def drawImage():
 				red = int(color1List[0])
 				green = int(color1List[1])
 				blue = int(color1List[2])
-
 			if rng == 2:
 				red = int(color2List[0])
 				green = int(color2List[1])
 				blue = int(color2List[2])
-
 			if rng == 3:
 				red = int(color3List[0])
 				green = int(color3List[1])
 				blue = int(color3List[2])
-
 			if rng == 4:
 				red = int(color4List[0])
 				green = int(color4List[1])
 				blue = int(color4List[2])
-
 			if rng == 5:
 				red = int(color5List[0])
 				green = int(color5List[1])
 				blue = int(color5List[2])
 
-			#print(red,green,blue)
-			#print(color1List,color2List,color3List,color4List,color5List)
 			for x in range(10):
 				for y in range(10):			
 					pixel[x+latx,y+lony]=(red,green,blue)
 
 	return testImage
 
-def main():
-	finalImage = drawImage()
-	finalImage.show()
-
-if __name__ == "__main__":
-	main()
+finalImage = drawImage()
+finalImage.show()
