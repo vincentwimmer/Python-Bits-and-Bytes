@@ -85,9 +85,10 @@ def drawImage():
 
 	return bottomGen
 
-finalImage = drawImage()
-#finalImage.show()
+#finalImage = drawImage()
+##finalImage.show()
+#finalImage.save('C:/Users/vwimmer/Desktop/test.png')
 
-
-
-finalImage.save('C:/Users/vwimmer/Desktop/test.png')
+for xnum in range(5):
+	finalImage = drawImage()
+	finalImage.save('C:/Users/vwimmer/Desktop/Out/'+str(xnum).zfill(3)+'.png')
