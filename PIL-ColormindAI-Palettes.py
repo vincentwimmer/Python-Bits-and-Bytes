@@ -8,17 +8,17 @@ url = 'http://colormind.io/api/'
 headers = {
 	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
 	}
-data1 = {'model': 'ui'}
-data2 = {'model': 'communist'}
+data1 = {'model': 'makoto_shinkai'}
+data2 = {'model': 'maple_story'}
 data3 = {'model': 'default'}
 
 def drawImage():
 	# Get colors and split them
 	rng = random.randrange(1,4)
 	if rng == 1:
-		data = data3
+		data = data1
 	if rng == 2:
-		data = data3
+		data = data2
 	if rng == 3:
 		data = data3
 
