@@ -9,7 +9,7 @@ headers = {
 	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
 	}
 data1 = {'model': 'makoto_shinkai'}
-data2 = {'model': 'maple_story'}
+data2 = {'model': 'city_photography'}
 data3 = {'model': 'default'}
 
 def drawImage():
@@ -80,12 +80,14 @@ def drawImage():
 			
 			rng = rng + 1
 				
-
+	print(data)
 	bottomGen.paste(topGen,box=(250,250),mask=topGen)
 
 	return bottomGen
 
 finalImage = drawImage()
 #finalImage.show()
+
+
 
 finalImage.save('C:/Users/vwimmer/Desktop/test.png')
