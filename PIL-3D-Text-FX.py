@@ -8,7 +8,7 @@ inputText = "//&&||$$123ABC@@"
 # Set it up with Anti-Aliasing like in "PIL-AA-Font.py" - 3x everything's size.
 img2 = Image.new("RGBA", (900, 900), (255, 255, 255, 0))
 draw = ImageDraw.Draw(img2)
-font = ImageFont.truetype("Roboto-Medium.ttf", 72)
+font = ImageFont.truetype("arial.ttf", 72)
 
 # Draw Text in loop while moving the draw position for each iteration. Also add increasing color values for gradient effect.
 for x in range(20):
