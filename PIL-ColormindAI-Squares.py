@@ -50,13 +50,13 @@ def drawImage():
 	# 245760 x 138240 256k
 
 	# Create Image
-	testImage = Image.new("RGB", (15360,8640), (255,255,255))
+	testImage = Image.new("RGB", (1000,1000), (255,255,255))
 	pixel = testImage.load()
 
-	for latx in range(1536):
+	for latx in range(100):
 		latx = latx * 10
-		for lony in range(864):
-			lony = lony * 10
+		for lony in range(100):
+			lony = (lony * 10) - 10
 
 			rng = random.randrange(1,6)
 
@@ -90,4 +90,4 @@ def drawImage():
 finalImage = drawImage()
 #finalImage.show()
 
-finalImage.save('C:/Users/vwimmer/Desktop/test.png')
+finalImage.save('C:/test.png')
