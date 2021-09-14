@@ -4,6 +4,12 @@ import requests
 import re
 import json
 
+#Perams - ResX/Y must be divisible by SquareSize for best results.
+ResX = 900
+ResY = 900
+SquareSize = 5
+
+# Connect and get color
 url = 'http://colormind.io/api/'
 headers = {
 	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"
@@ -50,13 +56,13 @@ def drawImage():
 	# 245760 x 138240 256k
 
 	# Create Image
-	testImage = Image.new("RGB", (1000,1000), (255,255,255))
+	testImage = Image.new("RGB", (ResX,ResY), (255,255,255))
 	pixel = testImage.load()
 
-	for latx in range(100):
-		latx = latx * 10
-		for lony in range(100):
-			lony = (lony * 10) - 10
+	for latx in range((ResX//SquareSize)):
+		latx = latx * SquareSize
+		for lony in range((ResY//SquareSize)):
+			lony = (lony * SquareSize) - SquareSize
 
 			rng = random.randrange(1,6)
 
@@ -81,8 +87,8 @@ def drawImage():
 				green = int(color5List[1])
 				blue = int(color5List[2])
 
-			for x in range(10):
-				for y in range(10):			
+			for x in range(SquareSize):
+				for y in range(SquareSize):			
 					pixel[x+latx,y+lony]=(red,green,blue)
 
 	return testImage
